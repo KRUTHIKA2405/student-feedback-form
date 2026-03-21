@@ -1,0 +1,95 @@
+/* General Page Styling */
+body {
+    background-color: #eef2f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form Container */
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields & Textarea */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-size: 14px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Radio Buttons Styling */
+label {
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+/* Buttons */
+button {
+    width: 48%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+    float: right;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+/* Success Message */
+#successMsg {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}

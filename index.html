@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Feedback Form</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* Internal CSS */
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .error { color: red; font-size: 0.8em; display: block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Feedback Form</h2>
+        <form id="feedbackForm">
+            <input type="text" id="name" placeholder="Student Name" required><br>
+            <input type="email" id="email" placeholder="Email ID" required><br>
+            <input type="text" id="mobile" placeholder="Mobile Number" required><br>
+            
+            <select id="department">
+                <option value="">Select Department</option>
+                <option value="CS">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="EE">Electrical Engineering</option>
+            </select><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female<br>
+
+            <textarea id="comments" placeholder="Your Feedback (Min 10 words)"></textarea><br>
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        <p id="successMsg" style="color: green; display: none;">Form submitted successfully!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
