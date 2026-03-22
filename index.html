@@ -1,41 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Student Feedback Form</title>
-    <link rel="stylesheet" href="style.css"> <style>
-        /* Internal CSS */
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .error { color: red; font-size: 0.8em; display: block; margin-bottom: 10px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Student Feedback Form</h2>
-        <form id="feedbackForm">
-            <input type="text" id="name" placeholder="Student Name" required><br>
-            <input type="email" id="email" placeholder="Email ID" required><br>
-            <input type="text" id="mobile" placeholder="Mobile Number" required><br>
-            
-            <select id="department">
-                <option value="">Select Department</option>
-                <option value="CS">Computer Science</option>
-                <option value="IT">Information Technology</option>
-                <option value="EE">Electrical Engineering</option>
-            </select><br>
+<div class="container">
+    <h2>Student Feedback</h2>
+    <p class="subtitle">We value your input to improve our campus.</p>
+    
+    <form id="feedbackForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="e.g. Kruthika Agarwal" required>
 
-            <label>Gender:</label>
-            <input type="radio" name="gender" value="Male"> Male
-            <input type="radio" name="gender" value="Female"> Female<br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="name@college.edu" required>
 
-            <textarea id="comments" placeholder="Your Feedback (Min 10 words)"></textarea><br>
-            
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
-        </form>
-        <p id="successMsg" style="color: green; display: none;">Form submitted successfully!</p>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" placeholder="10-digit number" required>
+
+        <label for="department">Department</label>
+        <select id="department">
+            <option value="">Choose Department...</option>
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+        </select>
+
+        <label>Gender</label>
+        <div class="gender-group">
+            <span><input type="radio" name="gender" value="Male"> Male</span>
+            <span><input type="radio" name="gender" value="Female"> Female</span>
+        </div>
+
+        <label for="comments">Feedback Comments</label>
+        <textarea id="comments" placeholder="Describe your experience (min 10 words)..."></textarea>
+        
+        <div class="button-group">
+            <button type="submit">Submit Feedback</button>
+            <button type="reset">Clear</button>
+        </div>
+    </form>
+    <p id="successMsg" style="color: #4ade80; display: none; text-align: center; margin-top: 20px;">✓ Feedback sent successfully!</p>
+</div>
